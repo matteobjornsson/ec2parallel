@@ -96,16 +96,16 @@ for j in range(1, final_size+1):
 pool.close()
 pool.join()
 
-final_data = np.array(data).tolist()
+final_data = np.array(data)
+#
+#temp = []
+#for i in range(len(final_data)):
+#	temp.append(','.join([str(x) for x in final_data[i]]))
+#msg = '\n'.join(temp)
+#
+np.savetxt('data.csv', data, delimiter=',')
 
-temp = []
-for i in range(len(final_data)):
-	temp.append(','.join([str(x) for x in final_data[i]]))
-msg = '\n'.join(temp)
-
-#np.savetxt(s, data, delimiter=',')
-
-send_email('matteobjornsson@gmail.com', msg)
+#send_email('matteobjornsson@gmail.com', msg)
 
 #print("Fast way: ", elapsed1)
 #print("Slow Way: ", check2, ":", elapsed2)

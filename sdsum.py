@@ -82,7 +82,7 @@ def send_email(receiver_email: str, msg: str):
     smtp_server = "smtp.gmail.com"
     sender_email = "mountain.project.python@gmail.com"  # Enter your address
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-        server.login(sender_email, 'v5i#2HGIVC@j')
+        server.login(sender_email, 'nopasswordforyou')
         server.sendmail(sender_email, receiver_email, msg.encode('utf-8'))
 
 
